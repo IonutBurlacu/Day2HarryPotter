@@ -13,9 +13,17 @@ namespace HarryPotter
         public decimal GetCost(IEnumerable<IHarryPotterBook> books)
         {
             decimal cost = 0;
-            int bookCount = books.Count();
-            IPayment payment = GetPayment(bookCount);
-            cost = payment.GetCost(books);
+
+            int paymentSetCount = 0;
+            while (books.Any(x => x.count > paymentSetCount))
+            {
+                IEnumerable<IHarryPotterBook> bookSets = books.Where(x => x.count > paymentSetCount);
+                int bookCount = bookSets.Count();
+                IPayment payment = GetPayment(bookCount);
+                int setCount = bookSets.Min(x => x.count) - paymentSetCount;
+                cost += payment.GetCost(bookSets, setCount);
+                paymentSetCount += setCount;
+            }
             return cost;
         }
 

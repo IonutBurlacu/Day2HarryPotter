@@ -9,9 +9,9 @@ namespace HarryPotterLib
 {
     public class OnePayment : IPayment
     {
-        public decimal GetCost(IEnumerable<IHarryPotterBook> books)
+        public decimal GetCost(IEnumerable<IHarryPotterBook> books, int setCount)
         {
-            return books.Sum(b => b.count * b.price);
+            return books.Sum(b => setCount * b.price);
         }
     }
 }

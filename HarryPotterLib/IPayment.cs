@@ -9,6 +9,6 @@ namespace HarryPotterLib
 {
     public interface IPayment
     {
-        decimal GetCost(IEnumerable<IHarryPotterBook> books);
+        decimal GetCost(IEnumerable<IHarryPotterBook> books, int setCount);
     }
 }
