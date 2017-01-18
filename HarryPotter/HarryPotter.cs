@@ -14,57 +14,35 @@ namespace HarryPotter
         {
             decimal cost = 0;
             int bookCount = books.Count();
-            if (bookCount == 5)
-            {
-                cost = GetFiveBookCost(books);
-            }
-            else if (bookCount == 4)
-            {
-                cost = GetFourBookCost(books);
-            }
-            else if (bookCount == 3)
-            {
-                cost = GetThreeBookCost(books);
-            }
-            else if (bookCount == 2)
-            {
-                cost = GetTwoBookCost(books);
-            }
-            else
-            {
-                cost = GetOneBookCost(books);
-            }
+            IPayment payment = GetPayment(bookCount);
+            cost = payment.GetCost(books);
             return cost;
         }
 
-        private static decimal GetFiveBookCost(IEnumerable<IHarryPotterBook> books)
+        private IPayment GetPayment(int bookCount)
         {
-            FivePayment bookCost = new FivePayment();
-            return bookCost.GetCost(books);
-        }
-
-        private static decimal GetFourBookCost(IEnumerable<IHarryPotterBook> books)
-        {
-            FourPayment bookCost = new FourPayment();
-            return bookCost.GetCost(books);
-        }
-
-        private static decimal GetThreeBookCost(IEnumerable<IHarryPotterBook> books)
-        {
-            ThreePayment bookCost = new ThreePayment();
-            return bookCost.GetCost(books);
-        }
-
-        private static decimal GetTwoBookCost(IEnumerable<IHarryPotterBook> books)
-        {
-            TwoPayment bookCost = new TwoPayment();
-            return bookCost.GetCost(books);
-        }
-
-        private static decimal GetOneBookCost(IEnumerable<IHarryPotterBook> books)
-        {
-            OnePayment bookCost = new OnePayment();
-            return bookCost.GetCost(books);
+            IPayment payment = null;
+            if (bookCount == 5)
+            {
+                payment = new FivePayment();
+            }
+            else if (bookCount == 4)
+            {
+                payment = new FourPayment();
+            }
+            else if (bookCount == 3)
+            {
+                payment = new ThreePayment();
+            }
+            else if (bookCount == 2)
+            {
+                payment = new TwoPayment();
+            }
+            else
+            {
+                payment = new OnePayment();
+            }
+            return payment;
         }
     }
 }
