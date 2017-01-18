@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace HarryPotterLib
 {
-    public class TwoBookCost
+    public class FourPayment : IPayment
     {
         public decimal GetCost(IEnumerable<IHarryPotterBook> books)
         {
-            return books.Sum(b => b.count * b.price) * (decimal)0.95;
+            return books.Sum(b => b.price * b.count) * (decimal)0.8;
         }
     }
 }

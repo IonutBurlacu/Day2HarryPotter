@@ -46,12 +46,13 @@
     <Compile Include="Books\HarryPotterBook4.cs" />
     <Compile Include="Books\HarryPotterBook5.cs" />
     <Compile Include="Books\IHarryPotterBook.cs" />
-    <Compile Include="FiveBookCost.cs" />
-    <Compile Include="FourBookCost.cs" />
-    <Compile Include="OneBookCost.cs" />
+    <Compile Include="FivePayment.cs" />
+    <Compile Include="FourPayment.cs" />
+    <Compile Include="IPayment.cs" />
+    <Compile Include="OnePayment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThreeBookCost.cs" />
-    <Compile Include="TwoBookCost.cs" />
+    <Compile Include="ThreePayment.cs" />
+    <Compile Include="TwoPayment.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

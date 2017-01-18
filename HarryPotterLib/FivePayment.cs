@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotterLib
 {
-    public class FiveBookCost
+    public class FivePayment : IPayment
     {
         public decimal GetCost(IEnumerable<IHarryPotterBook> books)
         {

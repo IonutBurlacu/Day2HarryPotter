@@ -13,19 +13,20 @@ namespace HarryPotter
         public decimal GetCost(IEnumerable<IHarryPotterBook> books)
         {
             decimal cost = 0;
-            if (books.Count() == 5)
+            int bookCount = books.Count();
+            if (bookCount == 5)
             {
                 cost = GetFiveBookCost(books);
             }
-            else if (books.Count() == 4)
+            else if (bookCount == 4)
             {
                 cost = GetFourBookCost(books);
             }
-            else if (books.Count() == 3)
+            else if (bookCount == 3)
             {
                 cost = GetThreeBookCost(books);
             }
-            else if (books.Count() == 2)
+            else if (bookCount == 2)
             {
                 cost = GetTwoBookCost(books);
             }
@@ -38,31 +39,31 @@ namespace HarryPotter
 
         private static decimal GetFiveBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            FiveBookCost bookCost = new FiveBookCost();
+            FivePayment bookCost = new FivePayment();
             return bookCost.GetCost(books);
         }
 
         private static decimal GetFourBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            FourBookCost bookCost = new FourBookCost();
+            FourPayment bookCost = new FourPayment();
             return bookCost.GetCost(books);
         }
 
         private static decimal GetThreeBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            ThreeBookCost bookCost = new ThreeBookCost();
+            ThreePayment bookCost = new ThreePayment();
             return bookCost.GetCost(books);
         }
 
         private static decimal GetTwoBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            TwoBookCost bookCost = new TwoBookCost();
+            TwoPayment bookCost = new TwoPayment();
             return bookCost.GetCost(books);
         }
 
         private static decimal GetOneBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            OneBookCost bookCost = new OneBookCost();
+            OnePayment bookCost = new OnePayment();
             return bookCost.GetCost(books);
         }
     }
