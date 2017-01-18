@@ -16,7 +16,7 @@ namespace HarryPotter.Tests
         public void GetCostTest_3本第1集_300元()
         {
             List<IHarryPotterBook> books = new List<IHarryPotterBook> {
-                new HarryPotterBook1 { count=3}
+                new HarryPotterBook1 { count = 3 }
             };
             HarryPotter target = new HarryPotter();
 
