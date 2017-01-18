@@ -12,7 +12,14 @@ namespace HarryPotter
         public decimal GetCost(IEnumerable<IHarryPotterBook> books)
         {
             decimal cost = 0;
-            cost = books.Sum(b => b.count * b.price);
+            if (books.Count() == 2)
+            {
+                cost = books.Sum(b => b.count * b.price) * (decimal)0.95;
+            }
+            else
+            {
+                cost = books.Sum(b => b.count * b.price);
+            }
             return cost;
         }
     }
