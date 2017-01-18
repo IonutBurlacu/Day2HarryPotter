@@ -13,14 +13,14 @@ namespace HarryPotter.Tests
     public class HarryPotterTests
     {
         [TestMethod()]
-        public void GetCostTest_3本第1集_300元()
+        public void GetCostTest_1本第1集_100元()
         {
             List<IHarryPotterBook> books = new List<IHarryPotterBook> {
-                new HarryPotterBook1 { count = 3 }
+                new HarryPotterBook1 { count = 1 }
             };
             HarryPotter target = new HarryPotter();
 
-            decimal expected = 300;
+            decimal expected = 100;
             var actual = target.GetCost(books);
 
             Assert.AreEqual(expected, actual);
