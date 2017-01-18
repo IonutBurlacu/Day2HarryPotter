@@ -25,5 +25,20 @@ namespace HarryPotter.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void GetCostTest_1本第1集_1本第2集_190元()
+        {
+            List<IHarryPotterBook> books = new List<IHarryPotterBook> {
+                new HarryPotterBook1 { count = 1 },
+                new HarryPotterBook2 { count = 1 }
+            };
+            HarryPotter target = new HarryPotter();
+
+            decimal expected = 190;
+            var actual = target.GetCost(books);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
