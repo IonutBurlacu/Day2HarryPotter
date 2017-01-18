@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotter", "HarryPotter.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterTests", "..\HarryPotterTests\HarryPotterTests.csproj", "{9075E2D9-00AB-49AA-A866-A4D6806FACD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotterLib", "..\HarryPotterLib\HarryPotterLib.csproj", "{67380FD0-263F-4C42-8160-95BEA8147BAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9075E2D9-00AB-49AA-A866-A4D6806FACD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9075E2D9-00AB-49AA-A866-A4D6806FACD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9075E2D9-00AB-49AA-A866-A4D6806FACD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67380FD0-263F-4C42-8160-95BEA8147BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67380FD0-263F-4C42-8160-95BEA8147BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67380FD0-263F-4C42-8160-95BEA8147BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67380FD0-263F-4C42-8160-95BEA8147BAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

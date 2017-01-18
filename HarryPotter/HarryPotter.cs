@@ -1,4 +1,5 @@
 ﻿using HarryPotter.Books;
+using HarryPotterLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,27 +38,32 @@ namespace HarryPotter
 
         private static decimal GetFiveBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            return books.Sum(b => b.price * b.count) * (decimal)0.75;
+            FiveBookCost bookCost = new FiveBookCost();
+            return bookCost.GetCost(books);
         }
 
         private static decimal GetFourBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            return books.Sum(b => b.price * b.count) * (decimal)0.8;
+            FourBookCost bookCost = new FourBookCost();
+            return bookCost.GetCost(books);
         }
 
         private static decimal GetThreeBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            return books.Sum(b => b.price * b.count) * (decimal)0.9;
+            ThreeBookCost bookCost = new ThreeBookCost();
+            return bookCost.GetCost(books);
         }
 
         private static decimal GetTwoBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            return books.Sum(b => b.count * b.price) * (decimal)0.95;
+            TwoBookCost bookCost = new TwoBookCost();
+            return bookCost.GetCost(books);
         }
 
         private static decimal GetOneBookCost(IEnumerable<IHarryPotterBook> books)
         {
-            return books.Sum(b => b.count * b.price);
+            OneBookCost bookCost = new OneBookCost();
+            return bookCost.GetCost(books);
         }
     }
 }

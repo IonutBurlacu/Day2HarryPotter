@@ -55,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HarryPotterLib\HarryPotterLib.csproj">
+      <Project>{67380fd0-263f-4c42-8160-95bea8147bae}</Project>
+      <Name>HarryPotterLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HarryPotter\HarryPotter.csproj">
       <Project>{38E41E3C-86D2-47F1-9FE3-899789757127}</Project>
       <Name>HarryPotter</Name>
